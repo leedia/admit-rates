@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				Highcharts.chart('container', {
+					colors: ['#a82931'],
+				    chart: {
+				        type: 'column'
+				    },
+				    title: {
+				        text: 'Minority Students as a Percentage of the Admitted Class of 2022'
+				    },
+				    xAxis: {
+				    	title: {
+				    		text: '*Stanford, Yale, Columbia, MIT did not release this data'
+				    	},
+				        categories: ['Harvard', 'Cornell', 'Dartmouth','Princeton','Brown','UPenn']
+				    },
+				    yAxis: {
+				        min: 0,
+				        title: {
+				            text: 'Percent (%) Minority Students'
+				        }
+				    },
+				    legend: {
+				        reversed: true
+				    },
+				    series: [{
+				        name: 'Percent (%) Minority',
+				        data: [52.8, 54, 50, 53.4, 49, 53]
+				    }]
+				});
+							
+			});
+		</script>	
+	</head>
+	<body>
+		<div id="container" style="text-align:center; width: 600px; height: 400px; margin: 0 auto"></div>
+				
+	</body>
+</html>
+
+
+
+
+
+
+
+
+	

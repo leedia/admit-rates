@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				Highcharts.chart('container', {
+					colors: ['#004e6a'],
+				    chart: {
+				        type: 'column'
+				    },
+				    title: {
+				        text: 'International Students as a Percentage of the Admitted Class of 2022'
+				    },
+				    xAxis: {
+				    	title: {
+				    		text: '*Yale, UPenn, Columbia, MIT did not release this data.'
+				    	},
+				        categories: ['Stanford','Harvard', 'Cornell', 'Dartmouth','Princeton','Brown']
+				    },
+				    yAxis: {
+				        min: 0,
+				        title: {
+				            text: 'Percent (%) International Students'
+				        }
+				    },
+				    legend: {
+				        reversed: true
+				    },
+				    series: [{
+				        name: 'Percent (%) International Students',
+				        data: [11.4,12,9,11,12,11]
+				    }]
+				});
+							
+			});
+		</script>	
+	</head>
+	<body>
+		<div id="container" style="text-align:center; width: 600px; height: 400px; margin: 0 auto"></div>
+				
+	</body>
+</html>
